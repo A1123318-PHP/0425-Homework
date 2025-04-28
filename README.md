@@ -7,6 +7,4 @@
 2. 將 mail_username 改為您的電子郵件帳號。<br>
 3. 將 mail_password 改為您的電子郵件服務提供的應用程式密碼。
 
-本專案部分功能使用了 PHPMailer (https://github.com/PHPMailer/PHPMailer)，
-依據 GNU Lesser General Public License v2.1 或後續版本 (LGPL-2.1-or-later) 授權。
-PHPMailer 原始授權內容請參閱其官方 LICENSE 文件。
+本專案部分功能使用了 PHPMailer (https://github.com/PHPMailer/PHPMailer)，依據 GNU Lesser General Public License v2.1 或後續版本 (LGPL-2.1-or-later) 授權。PHPMailer 原始授權內容請參閱其官方 LICENSE 文件。
