@@ -1,3 +1,11 @@
+<!-- 
+此作業需正確設定電子郵件帳號及應用程式密碼，否則將無法正常運作。
+請依下列步驟操作：
+1. 開啟專案根目錄下的 config.php 檔案。
+2. 將 mail_username 改為您的電子郵件帳號。
+3. 將 mail_password 改為您的電子郵件服務提供的應用程式密碼。
+-->
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -25,13 +33,16 @@
         $fileName = "pic\\" . $userName . ".png";
         $filePath = $userName . ".png";
         $config = require 'config.php';
-
+        if ($config['mail_username'] === 'your_email@example.com') {
+            echo "請先到 config.php 修改您的電子郵件帳號！";
+            exit;
+        }
 
         try{
             $sql = "INSERT INTO data (Name, Email, Photo) VALUES ('$userName', '$userEmail', '$filePath')";
             if(mysqli_query($link, $sql)){
                 if(rename($_FILES["photo"]["tmp_name"],$fileName)) {
-                    //Create an instance; passing `true` enables exceptions
+                    // Create an instance; passing `true` enables exceptions
                     $mail = new PHPMailer(true);
 
                     try {
